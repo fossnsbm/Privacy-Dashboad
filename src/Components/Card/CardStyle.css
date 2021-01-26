@@ -1,0 +1,22 @@
+.mcard {
+    width: 18rem;
+    margin-top: 50px;
+    margin-left: auto; 
+    margin-right: auto; 
+    cursor:pointer;
+    transition:all .4s ease-in-out;
+    
+}
+.mcard:hover {
+    transform:scale(1.05);
+    box-shadow:10px 10px 10px #888888;
+}
+
+.avatar {
+    position: absolute;
+    vertical-align: middle;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    transform: translate(20px, -30px);
+}
