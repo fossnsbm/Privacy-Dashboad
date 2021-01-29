@@ -41,7 +41,7 @@ function FormAndSlide() {
               />
               <button
                 type="submit"
-                className="btn btn-primary rounded-pill mt-4"
+                className="btn btn-primary rounded-pill mt-4 mb-4"
               >
                 Submit
               </button>
@@ -50,7 +50,7 @@ function FormAndSlide() {
 
           <div className="col-md-1"></div>
 
-          <div className="col-md-6">
+          <div className="col-md-6 mb-2">
             <div
               id="carouselExampleIndicators"
               className="carousel slide"
