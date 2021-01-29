@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Card from "./Components/Card/Card";
 import Nav from "./Components/NavBar/Nav";
 import Content from "./Components/Content/Content";
-import About from "./Components/pages/about";
+import About from "./Components/pages/about/about.jsx";
 
 export default class App extends Component {
   render() {
