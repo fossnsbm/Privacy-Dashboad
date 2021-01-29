@@ -1,7 +1,7 @@
 import React from "react";
 
 function About() {
-  return <h1>Helllo</h1>;
+  return <h1>About page</h1>;
 }
 
 export default About;
