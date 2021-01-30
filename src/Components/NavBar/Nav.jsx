@@ -1,4 +1,8 @@
 import React, { Component } from "react";
+import {
+  Link
+} from 'react-router-dom';
+
 
 import {
   MDBNavbar,
@@ -10,7 +14,7 @@ import {
   MDBCollapse,
   MDBContainer,
 } from "mdbreact";
-import { BrowserRouter as Router } from "react-router-dom";
+
 import Foss from "./Assets/Logo/Foss.png";
 
 class NavbarPage extends Component {
@@ -24,9 +28,10 @@ class NavbarPage extends Component {
 
   render() {
     return (
-      <Router>
+      <>
         <MDBNavbar className="bg-white" dark expand="md">
           <MDBContainer>
+            <Link to="/">
             <MDBNavbarBrand>
               <img
                 src={Foss}
@@ -37,34 +42,41 @@ class NavbarPage extends Component {
                 }}
               />
             </MDBNavbarBrand>
+            </Link>
             <MDBNavbarToggler
               className="bg-light"
               onClick={this.toggleCollapse}
             />
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
               <MDBNavbarNav right>
+             
                 <MDBNavItem active>
                   <MDBNavLink className="text-dark" to="/">
                     Dashboard
                   </MDBNavLink>
                 </MDBNavItem>
+                
+              
                 <MDBNavItem>
-                  <MDBNavLink className="text-dark" to="#!">
+                  <MDBNavLink className="text-dark" to="/">
                     Services
                   </MDBNavLink>
                 </MDBNavItem>
-                <MDBNavItem>
-                  <MDBNavLink className="text-dark" to="/about">
-                    About
+                
+                
+                  <MDBNavItem>
+                    <MDBNavLink className="text-dark" to="/about">
+                      About
                   </MDBNavLink>
-                </MDBNavItem>
+                  </MDBNavItem>
+          
               </MDBNavbarNav>
             </MDBCollapse>
           </MDBContainer>
         </MDBNavbar>
 
         <MDBContainer className="my-5"></MDBContainer>
-      </Router>
+      </>
     );
   }
 }
