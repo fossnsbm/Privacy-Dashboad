@@ -1,0 +1,7 @@
+.CardHeader{
+    border-radius: 5px !important;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-top: -18px;
+    border: 0 !important;
+    height: 50px;
+}
