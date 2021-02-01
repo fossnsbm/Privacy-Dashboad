@@ -1,6 +1,7 @@
 import React from "react"
 import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBTable, MDBTableBody, MDBTableHead, MDBContainer, MDBRow, MDBCol  } from 'mdbreact';
 import './Blog.css';
+import Chart from './Chart';
 
 const Blog = (props) => {
   const data_panel = {
@@ -13,12 +14,12 @@ const Blog = (props) => {
       },
       {
         'label': 'Duration',
-        'field': 'last',
+        'field': 'duration',
         'sort': 'asc'
       },
       {
         'label': 'Time',
-        'field': 'username',
+        'field': 'time',
         'sort': 'asc'
       },
      
@@ -27,47 +28,47 @@ const Blog = (props) => {
       {
         
         'status': 'Active',
-        'last': 'Otto',
-        'username': '@mdo',
+        'duration': '1 hour',
+        'time': '19:52',
       },
       {
         
         'status': 'Inactive',
-        'last': 'Thornton',
-        'username': '@fat',
+        'duration': '2 hours',
+        'time': '19:52',
       },
 
       {
         
         'status': 'Active',
-        'last': 'Otto',
-        'username': '@mdo',
+        'duration': '1 hour',
+        'time': '19:52',
       },
       {
         
         'status': 'Inactive',
-        'last': 'Thornton',
-        'username': '@fat',
+        'duration': '2 hours',
+        'time': '19:52',
       },
 
       {
         
         'status': 'Active',
-        'last': 'Otto',
-        'username': '@mdo',
+        'duration': '1 hour',
+        'time': '19:52',
       },
       {
         
         'status': 'Inactive',
-        'last': 'Thornton',
-        'username': '@fat',
+        'duration': '2 hours',
+        'time': '19:52',
       },
 
       {
         
         'status': 'Active',
-        'last': 'Otto',
-        'username': '@mdo',
+        'duration': '1 hour',
+        'time': '19:52',
       }  
     ]
   };
@@ -80,6 +81,7 @@ const Blog = (props) => {
                 <h2>FOSS Blog</h2>
                 <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi architecto quasi. Nobis non labore cumque eius necessitatibus eaque expedita amet, dolore tempora blanditiis vel debitis delectus aut, ratione quisquam</p>
                 <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente aperiam labore ipsum natus enim culpa, laborum repellendus quo? Quaerat, alias? Suscipit assumenda, illum id soluta quidem animi culpa distinctio!</p>
+                <Chart/>
               </MDBCol>
 
            <MDBCol className="lg-6">
