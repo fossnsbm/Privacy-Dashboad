@@ -13,6 +13,10 @@ import {
   MDBNavbarToggler,
   MDBCollapse,
   MDBContainer,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
 } from "mdbreact";
 
 import Foss from "./Assets/Logo/Foss.png";
@@ -29,15 +33,15 @@ class NavbarPage extends Component {
   render() {
     return (
       <>
-        <MDBNavbar className="bg-white" dark expand="md">
+        <MDBNavbar className="bg-white" light expand="md">
           <MDBContainer>
             <Link to="/">
             <MDBNavbarBrand>
               <img
-                src={Foss}
-                className="img-fluid"
-                alt="logo"
-                style={{
+                  src={Foss}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
                   width: "45px",
                 }}
               />
@@ -50,7 +54,7 @@ class NavbarPage extends Component {
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
               <MDBNavbarNav right>
              
-                <MDBNavItem active>
+                <MDBNavItem>
                   <MDBNavLink className="text-dark" to="/">
                     Dashboard
                   </MDBNavLink>
@@ -58,10 +62,26 @@ class NavbarPage extends Component {
                 
               
                 <MDBNavItem>
-                  <MDBNavLink className="text-dark" to="/">
-                    Services
-                  </MDBNavLink>
-                </MDBNavItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle nav>
+                      <div className="d-none d-md-inline text-dark">
+                          Services
+                      </div>
+                    </MDBDropdownToggle>
+                      <MDBDropdownMenu className="dropdown-default">
+                        <MDBDropdownItem>
+                          <MDBNavLink className="text-dark" to="/Blog">
+                            FOSS Blog
+                          </MDBNavLink>
+                        </MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Foss Forum</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Mail Server</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">KetchUp AddOn</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Event 404</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">RSVP App</MDBDropdownItem>
+                      </MDBDropdownMenu>
+                     </MDBDropdown>
+                   </MDBNavItem>
                 
                 
                   <MDBNavItem>
