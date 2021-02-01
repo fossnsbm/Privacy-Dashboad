@@ -8,7 +8,7 @@ const Blog = (props) => {
      
       {
         'label': 'Status',
-        'field': 'first',
+        'field': 'status',
         'sort': 'asc'
       },
       {
@@ -26,64 +26,49 @@ const Blog = (props) => {
     rows: [
       {
         
-        'first': 'On',
+        'status': 'Active',
         'last': 'Otto',
         'username': '@mdo',
       },
       {
         
-        'first': 'Off',
+        'status': 'Inactive',
         'last': 'Thornton',
         'username': '@fat',
       },
 
       {
         
-        'first': 'On',
+        'status': 'Active',
         'last': 'Otto',
         'username': '@mdo',
       },
       {
         
-        'first': 'Off',
+        'status': 'Inactive',
         'last': 'Thornton',
         'username': '@fat',
       },
 
       {
         
-        'first': 'On',
+        'status': 'Active',
         'last': 'Otto',
         'username': '@mdo',
       },
       {
         
-        'first': 'Off',
+        'status': 'Inactive',
         'last': 'Thornton',
         'username': '@fat',
       },
 
       {
         
-        'first': 'On',
+        'status': 'Active',
         'last': 'Otto',
         'username': '@mdo',
-      },
-      {
-        
-        'first': 'Off',
-        'last': 'Thornton',
-        'username': '@fat',
-      },
-
-      {
-        
-        'first': 'On',
-        'last': 'Otto',
-        'username': '@mdo',
-      },
-      
-      
+      }  
     ]
   };
 
@@ -92,7 +77,9 @@ const Blog = (props) => {
        <MDBRow>
 
               <MDBCol className="lg-6">
-
+                <h2>FOSS Blog</h2>
+                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi architecto quasi. Nobis non labore cumque eius necessitatibus eaque expedita amet, dolore tempora blanditiis vel debitis delectus aut, ratione quisquam</p>
+                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente aperiam labore ipsum natus enim culpa, laborum repellendus quo? Quaerat, alias? Suscipit assumenda, illum id soluta quidem animi culpa distinctio!</p>
               </MDBCol>
 
            <MDBCol className="lg-6">
