@@ -1,23 +1,23 @@
 import React from "react"
 import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBTable, MDBTableBody, MDBTableHead, MDBContainer, MDBRow, MDBCol  } from 'mdbreact';
-//import './Table.css';
+import './Blog.css';
 
 const Blog = (props) => {
   const data_panel = {
     columns: [
      
       {
-        'label': 'Field1',
+        'label': 'Status',
         'field': 'first',
         'sort': 'asc'
       },
       {
-        'label': 'Field1',
+        'label': 'Duration',
         'field': 'last',
         'sort': 'asc'
       },
       {
-        'label': 'Field1',
+        'label': 'Time',
         'field': 'username',
         'sort': 'asc'
       },
@@ -36,21 +36,71 @@ const Blog = (props) => {
         'last': 'Thornton',
         'username': '@fat',
       },
+
+      {
+        
+        'first': 'On',
+        'last': 'Otto',
+        'username': '@mdo',
+      },
+      {
+        
+        'first': 'Off',
+        'last': 'Thornton',
+        'username': '@fat',
+      },
+
+      {
+        
+        'first': 'On',
+        'last': 'Otto',
+        'username': '@mdo',
+      },
+      {
+        
+        'first': 'Off',
+        'last': 'Thornton',
+        'username': '@fat',
+      },
+
+      {
+        
+        'first': 'On',
+        'last': 'Otto',
+        'username': '@mdo',
+      },
+      {
+        
+        'first': 'Off',
+        'last': 'Thornton',
+        'username': '@fat',
+      },
+
+      {
+        
+        'first': 'On',
+        'last': 'Otto',
+        'username': '@mdo',
+      },
       
       
     ]
   };
 
   return(
-    <MDBContainer>
+    <MDBContainer className="Contain">
        <MDBRow>
 
-                <MDBCol className="lg-6">
+              <MDBCol className="lg-6">
 
-               </MDBCol>
+              </MDBCol>
 
            <MDBCol className="lg-6">
            <MDBCard narrow>
+
+           <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3 CardHeader">           
+                <a href="#" className="white-text mx-3">Foss Blog</a>
+            </MDBCardHeader>
             
             <MDBCardBody cascade>
                 <MDBTable btn fixed>
@@ -66,4 +116,3 @@ const Blog = (props) => {
 };
 
 export default Blog;
-
