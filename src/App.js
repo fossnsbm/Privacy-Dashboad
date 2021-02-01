@@ -5,6 +5,7 @@ import Card from "./Components/Card/Card";
 import Nav from "./Components/NavBar/Nav";
 import Content from "./Components/Content/Content";
 import About from "./Components/pages/about/about.jsx";
+import Blog from "./Components/pages/blog/Blog.jsx";
 
 export default class App extends Component {
   render() {
@@ -15,6 +16,9 @@ export default class App extends Component {
           <Switch>
             <Route path="/about">
               <About />
+            </Route>
+            <Route path="/Blog">
+              <Blog />
             </Route>
 
             <Route path="/">
