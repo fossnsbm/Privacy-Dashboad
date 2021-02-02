@@ -1,7 +1,8 @@
 import React from "react";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
-import './aboutStyle.css'
+import './aboutStyle.css';
+import { MDBInput } from "mdbreact";
 
 function FormAndSlide() {
   return (
@@ -10,42 +11,29 @@ function FormAndSlide() {
     <div className="container mt-4">
       <div className="row">
         <div className="col-md-5">
-          <h3 className="container">Contact</h3>
+          <h3>Contact</h3>
           <form>
             <div className="mt-4">
               {/*<label htmlFor="exampleInputEmail1" className="form-label">
               Email address
               </label>*/}
-              <input
-                type="email"
-                className="form-control mt-4"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Email address"
-              />
-              <div id="emailHelp" className="form-text">
-                <small>We'll never share your email with anyone else.</small>
-              </div>
-            </div>
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control "
-                id="exampleInputPassword1"
-                placeholder="Subject"
-              />
-            </div>
 
-            <textarea
-              className="form-control"
-              id="exampleFormControlTextarea1"
-              rows={3}
-              defaultValue={""}
-              placeholder="Massage"
-            />
+              <MDBInput label="Username" icon="user" />
+              <MDBInput label="Email" icon="fas fa-at" />
+              <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10"   className="area"/>
+              <i class=""></i>
+             
+              
+            
+              
+            </div>
+           
+
+            
             <button
               type="submit"
-              className="btn btn-primary rounded-pill mt-4 mb-4"
+              className="btn btn-primary  "
+              style={{borderRadius:'8px'}}
             >
               Submit
             </button>
