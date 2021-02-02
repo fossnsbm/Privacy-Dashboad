@@ -1,24 +1,25 @@
 import React from "react"
 import { MDBCard, MDBCardBody, MDBCardHeader, MDBInput, MDBBtn, MDBTable, MDBTableBody, MDBTableHead, MDBContainer, MDBRow, MDBCol  } from 'mdbreact';
-//import './Table.css';
+import './Blog.css';
+import Chart from './Chart';
 
 const Blog = (props) => {
   const data_panel = {
     columns: [
      
       {
-        'label': 'Field1',
-        'field': 'first',
+        'label': 'Status',
+        'field': 'status',
         'sort': 'asc'
       },
       {
-        'label': 'Field1',
-        'field': 'last',
+        'label': 'Duration',
+        'field': 'duration',
         'sort': 'asc'
       },
       {
-        'label': 'Field1',
-        'field': 'username',
+        'label': 'Time',
+        'field': 'time',
         'sort': 'asc'
       },
      
@@ -26,31 +27,69 @@ const Blog = (props) => {
     rows: [
       {
         
-        'first': 'On',
-        'last': 'Otto',
-        'username': '@mdo',
+        'status': 'Active',
+        'duration': '1 hour',
+        'time': '19:52',
       },
       {
         
-        'first': 'Off',
-        'last': 'Thornton',
-        'username': '@fat',
+        'status': 'Inactive',
+        'duration': '2 hours',
+        'time': '19:52',
       },
-      
-      
+
+      {
+        
+        'status': 'Active',
+        'duration': '1 hour',
+        'time': '19:52',
+      },
+      {
+        
+        'status': 'Inactive',
+        'duration': '2 hours',
+        'time': '19:52',
+      },
+
+      {
+        
+        'status': 'Active',
+        'duration': '1 hour',
+        'time': '19:52',
+      },
+      {
+        
+        'status': 'Inactive',
+        'duration': '2 hours',
+        'time': '19:52',
+      },
+
+      {
+        
+        'status': 'Active',
+        'duration': '1 hour',
+        'time': '19:52',
+      }  
     ]
   };
 
   return(
-    <MDBContainer>
+    <MDBContainer className="Contain">
        <MDBRow>
 
-                <MDBCol className="lg-6">
-
-               </MDBCol>
+              <MDBCol className="lg-6">
+                <h2>FOSS Blog</h2>
+                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi architecto quasi. Nobis non labore cumque eius necessitatibus eaque expedita amet, dolore tempora blanditiis vel debitis delectus aut, ratione quisquam</p>
+                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente aperiam labore ipsum natus enim culpa, laborum repellendus quo? Quaerat, alias? Suscipit assumenda, illum id soluta quidem animi culpa distinctio!</p>
+                <Chart/>
+              </MDBCol>
 
            <MDBCol className="lg-6">
            <MDBCard narrow>
+
+           <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3 CardHeader">           
+                <a href="#" className="white-text mx-3">Foss Blog</a>
+            </MDBCardHeader>
             
             <MDBCardBody cascade>
                 <MDBTable btn fixed>
@@ -66,4 +105,3 @@ const Blog = (props) => {
 };
 
 export default Blog;
-
