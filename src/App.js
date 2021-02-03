@@ -6,6 +6,7 @@ import Nav from "./Components/NavBar/Nav";
 import Content from "./Components/Content/Content";
 import About from "./Components/pages/about/about.jsx";
 import Blog from "./Components/pages/blog/Blog.jsx";
+import Footer from "./Components/Footer/Footer";
 
 export default class App extends Component {
   render() {
@@ -27,6 +28,7 @@ export default class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
+        <Footer/>
       </div>
     );
   }
