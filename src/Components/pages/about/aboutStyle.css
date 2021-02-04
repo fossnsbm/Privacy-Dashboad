@@ -21,3 +21,8 @@ img{
     text-align: left;
     font-weight: bolder;  
 }
+
+.error_msg {
+    color: red;
+    font-weight: bold;
+}
