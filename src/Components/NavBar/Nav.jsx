@@ -1,53 +1,102 @@
 import React, { Component } from "react";
 import {
-MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavItem, MDBNavLink, MDBNavbarToggler, MDBCollapse,MDBContainer} from "mdbreact";
-import { BrowserRouter as Router } from 'react-router-dom';
-import Foss from './Assets/Logo/Foss.png';
+  Link
+} from 'react-router-dom';
 
 
+import {
+  MDBNavbar,
+  MDBNavbarBrand,
+  MDBNavbarNav,
+  MDBNavItem,
+  MDBNavLink,
+  MDBNavbarToggler,
+  MDBCollapse,
+  MDBContainer,
+  MDBDropdown,
+  MDBDropdownToggle,
+  MDBDropdownMenu,
+  MDBDropdownItem,
+} from "mdbreact";
+
+import Foss from "./Assets/Logo/Foss.png";
 
 class NavbarPage extends Component {
-state = {
-  isOpen: false
-};
+  state = {
+    isOpen: false,
+  };
 
-toggleCollapse = () => {
-  this.setState({ isOpen: !this.state.isOpen });
-}
+  toggleCollapse = () => {
+    this.setState({ isOpen: !this.state.isOpen });
+  };
 
-render() {
-  return (
-    <Router>
-        
-      <MDBNavbar className="bg-white" dark expand="md">
-      <MDBContainer>
-        <MDBNavbarBrand>
-        <img src={Foss} className="img-fluid" alt="logo"  style={{
+  render() {
+    return (
+      <>
+        <MDBNavbar className="bg-white" light expand="md">
+          <MDBContainer>
+            <Link to="/">
+            <MDBNavbarBrand>
+              <img
+                  src={Foss}
+                  className="img-fluid"
+                  alt="logo"
+                  style={{
                   width: "45px",
-                }} />
-        </MDBNavbarBrand>
-        <MDBNavbarToggler className="bg-light" onClick={this.toggleCollapse} />
-        <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
-          <MDBNavbarNav right>
-            <MDBNavItem active>
-              <MDBNavLink className="text-dark" to="#!">Dashboard</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="text-dark" to="#!">Services</MDBNavLink>
-            </MDBNavItem>
-            <MDBNavItem>
-              <MDBNavLink className="text-dark" to="#!">About</MDBNavLink>
-            </MDBNavItem>   
-          </MDBNavbarNav>
-     
-        </MDBCollapse>
-        </MDBContainer>
-      </MDBNavbar>
-     
-      <MDBContainer className="my-5">
+                }}
+              />
+            </MDBNavbarBrand>
+            </Link>
+            <MDBNavbarToggler
+              className="bg-light"
+              onClick={this.toggleCollapse}
+            />
+            <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
+              <MDBNavbarNav right>
+             
+                <MDBNavItem>
+                  <MDBNavLink className="text-dark" to="/">
+                    Dashboard
+                  </MDBNavLink>
+                </MDBNavItem>
+                
+              
+                <MDBNavItem>
+                  <MDBDropdown>
+                    <MDBDropdownToggle nav>
+                      <div className="d-none d-md-inline text-dark">
+                          Services
+                      </div>
+                    </MDBDropdownToggle>
+                      <MDBDropdownMenu className="dropdown-default">
+                        <MDBDropdownItem>
+                          <MDBNavLink className="text-dark" to="/Blog">
+                            FOSS Blog
+                          </MDBNavLink>
+                        </MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Foss Forum</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Mail Server</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">KetchUp AddOn</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">Event 404</MDBDropdownItem>
+                        <MDBDropdownItem href="#!">RSVP App</MDBDropdownItem>
+                      </MDBDropdownMenu>
+                     </MDBDropdown>
+                   </MDBNavItem>
+                
+                
+                  <MDBNavItem>
+                    <MDBNavLink className="text-dark" to="/about">
+                      About
+                  </MDBNavLink>
+                  </MDBNavItem>
+          
+              </MDBNavbarNav>
+            </MDBCollapse>
+          </MDBContainer>
+        </MDBNavbar>
 
-      </MDBContainer>
-    </Router>
+        <MDBContainer className="my-5"></MDBContainer>
+      </>
     );
   }
 }

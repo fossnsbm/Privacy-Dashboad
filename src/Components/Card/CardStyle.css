@@ -1,22 +1,33 @@
 .mcard {
-    width: 18rem;
     margin-top: 50px;
     margin-left: auto; 
     margin-right: auto; 
     cursor:pointer;
     transition:all .4s ease-in-out;
-    
+    margin-bottom: 20px;
 }
 .mcard:hover {
     transform:scale(1.05);
-    box-shadow:10px 10px 10px #888888;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
 
-.avatar {
-    position: absolute;
-    vertical-align: middle;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    transform: translate(20px, -30px);
+.mcardheader
+{
+    border-radius: 50% !important;
+    width: 75px;
+    height: 75px;
+    margin-top: -25px;
+    border: 0 !important;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 0 !important;
+}
+
+.mcardtitle
+{
+    margin-top: -68px;
+}
+
+.mcardtext
+{
+    text-align: left !important;
 }
