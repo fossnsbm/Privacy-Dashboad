@@ -98,7 +98,7 @@ const Forum = (props) => {
 
         <MDBCol className="lg-6">
           <MDBCard narrow>
-            <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3 CardHeader">
+            <MDBCardHeader className="view view-cascade gradient-card-header purple-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3 CardHeader">
               <a href="#" className="white-text mx-3">
                 FOSS Forum
               </a>
