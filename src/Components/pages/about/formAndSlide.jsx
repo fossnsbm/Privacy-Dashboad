@@ -1,51 +1,87 @@
 import React from "react";
 import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
 "mdbreact";
-import './aboutStyle.css'
+import './aboutStyle.css';
+import { MDBInput } from "mdbreact";
+import { useFormik } from 'formik';
 
 function FormAndSlide() {
+
+  const validate = values => {
+    const errors = {};
+
+    if(!values.userName) {
+      errors.userName = 'Required';
+    } else if(values.userName.length > 20) {
+      errors.userName = 'Must be 20 characters or less';
+    }
+
+    if(!values.email) {
+      errors.email = 'Required';
+    } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = 'Invalid email address';
+    }
+
+    if(!values.message) {
+      errors.message = 'Required';
+    } else if(values.message.length > 100) {
+      errors.message = 'Must be 100 characters or less';
+    }
+    return errors;
+  }
+
+  const formik = useFormik({
+    initialValues: {
+      userName: '',
+      email: '',
+      message: '',
+    },
+    validate,
+    onSubmit: values => {
+      console.log(formik.values.userName);
+      console.log(formik.values.email);
+      console.log(formik.values.message);
+    }
+
+  })
+
   return (
    
     <>
     <div className="container mt-4">
       <div className="row">
         <div className="col-md-5">
-          <h3 className="container">Contact</h3>
-          <form>
+          <h3>Contact</h3>
+          <form onSubmit={formik.handleSubmit}>
             <div className="mt-4">
               {/*<label htmlFor="exampleInputEmail1" className="form-label">
               Email address
               </label>*/}
-              <input
-                type="email"
-                className="form-control mt-4"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Email address"
-              />
-              <div id="emailHelp" className="form-text">
-                <small>We'll never share your email with anyone else.</small>
-              </div>
-            </div>
-            <div className="mb-3">
-              <input
-                type="text"
-                className="form-control "
-                id="exampleInputPassword1"
-                placeholder="Subject"
-              />
-            </div>
 
-            <textarea
-              className="form-control"
-              id="exampleFormControlTextarea1"
-              rows={3}
-              defaultValue={""}
-              placeholder="Massage"
-            />
+              <MDBInput label="Username" icon="user" name='userName' id='userName'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.userName}
+              />
+              {formik.errors.userName && formik.touched.userName ? <div className='error_msg'>{formik.errors.userName}</div> : null}
+              <MDBInput label="Email" icon="fas fa-at" name='email' id='email'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.errors.email && formik.touched.email ? <div className='error_msg'>{formik.errors.email}</div> : null}
+              <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10" name='message' id='message' className="area"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.message}
+              />
+              {formik.errors.message && formik.touched.message ? <div className='error_msg'>{formik.errors.message}</div> : null}
+            </div>
+           
             <button
               type="submit"
-              className="btn btn-primary rounded-pill mt-4 mb-4"
+              className="btn btn-primary  "
+              style={{borderRadius:'8px'}}
             >
               Submit
             </button>

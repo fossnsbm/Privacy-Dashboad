@@ -18,8 +18,15 @@ img{
 
 .topic
 {
-    text-align: center;
+  text-align: center;
+  font-weight: bolder;  
+}   
+    text-align: left;
     font-weight: bolder;  
 }
 
+.error_msg {
+    color: red;
+    font-weight: bold;
+}
 
