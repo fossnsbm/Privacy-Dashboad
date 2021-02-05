@@ -107,7 +107,7 @@ function FormAndSlide() {
           <img
             className="d-block w-100"
             src="https://media-exp1.licdn.com/dms/image/C561BAQGjtb1ISMx83w/company-background_10000/0/1601264433225?e=1612623600&v=beta&t=UMnb4x3o8fXiBIaGdEpMyu_XzHMGiVDCxIVtLYxrt4Q"
-            alt="First slide"
+            alt="First Image"
           />
         <MDBMask className="masks" />
         </MDBView>
@@ -121,7 +121,7 @@ function FormAndSlide() {
           <img
             className="d-block w-100"
             src="https://www.nsbm.ac.lk/wp-content/uploads/2019/09/01-7.jpg"
-            alt="Second slide"
+            alt="Second Image"
           />
         <MDBMask className="masks" />
         </MDBView>
@@ -135,7 +135,7 @@ function FormAndSlide() {
           <img
             className="d-block w-100"
             src="https://media-exp1.licdn.com/dms/image/C5622AQFIN-s-SN6U5g/feedshare-shrink_2048_1536/0/1590757360946?e=1615420800&v=beta&t=BwP5zJVRaYQEVL0eWYdXqmFLVoGdR5P-Tv-sYo0So2M"
-            alt="Third slide"
+            alt="Third Image"
           />
         <MDBMask className="masks" />
         </MDBView>
