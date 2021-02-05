@@ -8,6 +8,7 @@ import About from "./Components/pages/about/about.jsx";
 import Blog from "./Components/pages/blog/Blog.jsx";
 import Footer from "./Components/Footer/Footer";
 import MailServer from "./Components/pages/mailServer/mailServer";
+import Forum from "./Components/pages/forum/forum";
 
 export default class App extends Component {
   render() {
@@ -25,6 +26,10 @@ export default class App extends Component {
 
             <Route path="/mailserver">
               <MailServer />
+            </Route>
+
+            <Route path="/forum">
+              <Forum />
             </Route>
 
             <Route path="/">

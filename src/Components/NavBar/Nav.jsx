@@ -65,7 +65,9 @@ class NavbarPage extends Component {
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
                       <MDBDropdownItem href="/Blog">FOSS Blog</MDBDropdownItem>
-                      <MDBDropdownItem href="#!">Foss Forum</MDBDropdownItem>
+                      <MDBDropdownItem href="/forum">
+                        Foss Forum
+                      </MDBDropdownItem>
                       <MDBDropdownItem href="/mailserver">
                         Mail Server
                       </MDBDropdownItem>
