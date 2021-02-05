@@ -3,8 +3,48 @@ import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDB
 "mdbreact";
 import './aboutStyle.css';
 import { MDBInput } from "mdbreact";
+import { useFormik } from 'formik';
 
 function FormAndSlide() {
+
+  const validate = values => {
+    const errors = {};
+
+    if(!values.userName) {
+      errors.userName = 'Required';
+    } else if(values.userName.length > 20) {
+      errors.userName = 'Must be 20 characters or less';
+    }
+
+    if(!values.email) {
+      errors.email = 'Required';
+    } else if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(values.email)) {
+      errors.email = 'Invalid email address';
+    }
+
+    if(!values.message) {
+      errors.message = 'Required';
+    } else if(values.message.length > 100) {
+      errors.message = 'Must be 100 characters or less';
+    }
+    return errors;
+  }
+
+  const formik = useFormik({
+    initialValues: {
+      userName: '',
+      email: '',
+      message: '',
+    },
+    validate,
+    onSubmit: values => {
+      console.log(formik.values.userName);
+      console.log(formik.values.email);
+      console.log(formik.values.message);
+    }
+
+  })
+
   return (
    
     <>
@@ -12,24 +52,32 @@ function FormAndSlide() {
       <div className="row">
         <div className="col-md-5">
           <h3>Contact</h3>
-          <form>
+          <form onSubmit={formik.handleSubmit}>
             <div className="mt-4">
               {/*<label htmlFor="exampleInputEmail1" className="form-label">
               Email address
               </label>*/}
 
-              <MDBInput label="Username" icon="user" />
-              <MDBInput label="Email" icon="fas fa-at" />
-              <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10"   className="area"/>
-              <i class=""></i>
-             
-              
-            
-              
+              <MDBInput label="Username" icon="user" name='userName' id='userName'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.userName}
+              />
+              {formik.errors.userName && formik.touched.userName ? <div className='error_msg'>{formik.errors.userName}</div> : null}
+              <MDBInput label="Email" icon="fas fa-at" name='email' id='email'
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.email}
+              />
+              {formik.errors.email && formik.touched.email ? <div className='error_msg'>{formik.errors.email}</div> : null}
+              <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10" name='message' id='message' className="area"
+                onChange={formik.handleChange}
+                onBlur={formik.handleBlur}
+                value={formik.values.message}
+              />
+              {formik.errors.message && formik.touched.message ? <div className='error_msg'>{formik.errors.message}</div> : null}
             </div>
            
-
-            
             <button
               type="submit"
               className="btn btn-primary  "
