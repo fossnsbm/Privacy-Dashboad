@@ -71,9 +71,13 @@ class NavbarPage extends Component {
                       <MDBDropdownItem href="/mailserver">
                         Mail Server
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="#!">KetchUp AddOn</MDBDropdownItem>
-                      <MDBDropdownItem href="#!">Event 404</MDBDropdownItem>
-                      <MDBDropdownItem href="#!">RSVP App</MDBDropdownItem>
+                      <MDBDropdownItem href="/ketchup">
+                        KetchUp AddOn
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="event404">
+                        Event 404
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="rsvp">RSVP App</MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>
