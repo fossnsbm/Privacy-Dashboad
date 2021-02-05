@@ -11,7 +11,7 @@ class ForumChart extends React.Component {
           label: "Status",
           fill: true,
           lineTension: 0,
-          backgroundColor: "rgba(244,111,201, .3)",
+          backgroundColor: "rgba(209,112,213, .3)",
           borderColor: "rgb(126,115,243)",
           borderCapStyle: "butt",
           borderDash: [],
