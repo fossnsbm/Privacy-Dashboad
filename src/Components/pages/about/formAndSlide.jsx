@@ -12,39 +12,59 @@ function FormAndSlide() {
       <div className="row">
         <div className="col-md-5">
           <h3>Contact</h3>
-          <form>
-            <div className="mt-4">
-              {/*<label htmlFor="exampleInputEmail1" className="form-label">
-              Email address
-              </label>*/}
+                <form>
+                  <div id="form_action">
+                          <div className="mt-2">
 
-              <MDBInput label="Username" icon="user" />
-              <MDBInput label="Email" icon="fas fa-at" />
-              <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10"   className="area"/>
-              <i class=""></i>
-             
-              
-            
-              
-            </div>
-           
+                  <form>
+                  
+                                <div class="form-outline mb-4">
+                                <i class="fas fa-user-alt fa-sm"></i>
+                                  <input type="text" id="form1Example1" class="form-control" placeholder="Username" />
+                                </div>
 
-            
-            <button
-              type="submit"
-              className="btn btn-primary  "
-              style={{borderRadius:'8px'}}
-            >
-              Submit
-            </button>
-          </form>
-        </div>
+                                
+                                <div class="form-outline mb-4">
+                                  <i class="fas fa-paper-plane fa-sm"></i>
+                                  <input type="email" id="form1Example2" class="form-control" placeholder="example@outlook.com"/>
+                                </div>
+
+                                <div class="md-form">
+                                  <i class="fas fa-envelope-open fa-sm"></i>
+                                  <textarea id="form10" class="md-textarea form-control mt-1" rows="3" placeholder="Message ..."></textarea>
+                                </div>
+                              
+
+                            
+ 
+  
+                  </form>
+
+                    {/*<label htmlFor="exampleInputEmail1" className="form-label">
+                    Email address
+                    </label>*/}
+
+                    {/*<MDBInput label="Username" icon="user" />
+                    <MDBInput label="Email" icon="fas fa-at" />
+                    <MDBInput  label="Message" icon="envelope"  type="textarea"  rows="3" cols="10"   className="area"/>
+                  <i class=""></i>*/}
+                  
+                    
+                  
+                    
+                  </div>
+                </div>
+                </form>
+                    <div id="button_sub">
+                        <button type="submit" class="btn  btn-block">Sign in</button>
+                    </div>
+              </div>
 
         <div className="col-md-1"></div>
 
         <div className="col-md-6 mb-2" >
          
-         <div className="slider" >
+         <div className="slider mt-5" >
         <MDBCarousel
     activeItem={1}
     length={3}
