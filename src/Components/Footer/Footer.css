@@ -17,3 +17,10 @@
 .twit:hover{
     color: #30a945;
 }
+
+.footer {
+    position: fixed;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
