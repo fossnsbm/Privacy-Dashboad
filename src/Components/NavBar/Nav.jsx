@@ -77,7 +77,7 @@ class NavbarPage extends Component {
                       <MDBDropdownItem href="event404">
                         Event 404
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="rsvp">RSVP App</MDBDropdownItem>
+                      <MDBDropdownItem href="/rsvp">RSVP App</MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>

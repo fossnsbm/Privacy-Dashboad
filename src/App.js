@@ -11,7 +11,7 @@ import MailServer from "./Components/pages/mailServer/mailServer";
 import Forum from "./Components/pages/forum/forum";
 import KetchUp from "./Components/pages/ketchUp/ketchUp";
 import Event404 from "./Components/pages/event404/event404";
-import RSVP from "./Components/pages/RSVP/RSVPapp";
+import RSVPapp from "./Components/pages/RSVP/RSVPapp";
 
 export default class App extends Component {
   render() {
@@ -44,7 +44,7 @@ export default class App extends Component {
             </Route>
 
             <Route path="/rsvp">
-              <RSVP />
+              <RSVPapp />
             </Route>
 
             <Route path="/">
