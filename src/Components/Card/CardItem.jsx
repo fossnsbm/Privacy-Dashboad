@@ -8,15 +8,16 @@ export default class CardItem extends Component {
             <React.Fragment>
                 <MDBCol sm="12" md="6" lg="4">
                     <MDBCard className="mcard">
-                        <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient d-flex justify-content-between align-items-center py-2 mx-4 mb-3 mcardheader">
-                            <p>FOSS Blog</p>
+                        <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+                            <i className={`${this.props.icon} fa-3x ico`}></i>
                         </MDBCardHeader>
                         <MDBCardBody cascade className="text-right">
                             <MDBCardTitle className="mcardtitle">{this.props.title}</MDBCardTitle>
-                            <MDBCardText className="mcardtext">{this.props.cardText}</MDBCardText>
+                            <MDBCardText className="mcardtext">{`Status: ${this.props.status}`}</MDBCardText>
+                            <MDBCardText className="mcardtext">{`Down Time: ${this.props.downTime}`}</MDBCardText>
                             <hr/>
                             <div className="text-left text-muted">
-                                Last Update 2020/01/25 12:20:59
+                                {`Last Update: ${this.props.lastUpdate}`}
                             </div>
                         </MDBCardBody>
                     </MDBCard>

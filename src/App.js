@@ -8,10 +8,13 @@ import About from "./Components/pages/about/about.jsx";
 import Blog from "./Components/pages/blog/Blog.jsx";
 import Footer from "./Components/Footer/Footer";
 
+import './App.css';
+
 export default class App extends Component {
   render() {
     return (
       <div>
+        <div className='app'>
         <BrowserRouter>
           <Nav />
           <Switch>
@@ -28,6 +31,7 @@ export default class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
+        </div>
         <Footer/>
       </div>
     );
