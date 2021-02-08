@@ -1,19 +1,28 @@
+.icon {
+  color: black;
+}
+.git:hover {
+  color: #30a945;
+}
+.lin:hover {
+  color: #30a945;
+}
+.fac:hover {
+  color: #30a945;
+}
+.ins:hover {
+  color: #30a945;
+}
+.twit:hover {
+  color: #30a945;
+}
 
-.icon{
-    color: black;
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
-.git:hover{
-    color: #30a945;
-}
-.lin:hover{
-    color: #30a945;
-}
-.fac:hover{
-    color: #30a945;
-}
-.ins:hover{
-    color: #30a945;
-}
-.twit:hover{
-    color: #30a945;
+
+#footer {
+  margin-top: auto;
 }
