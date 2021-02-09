@@ -13,10 +13,13 @@ import KetchUp from "./Components/pages/ketchUp/ketchUp";
 import Event404 from "./Components/pages/event404/event404";
 import RSVPapp from "./Components/pages/RSVP/RSVPapp";
 
+import './App.css';
+
 export default class App extends Component {
   render() {
     return (
       <div>
+        <div className='app'>
         <BrowserRouter>
           <Nav />
           <Switch>
@@ -53,7 +56,8 @@ export default class App extends Component {
             </Route>
           </Switch>
         </BrowserRouter>
-        <Footer />
+        </div>
+        <Footer/>
       </div>
     );
   }

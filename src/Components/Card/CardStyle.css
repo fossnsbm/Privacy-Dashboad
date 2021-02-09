@@ -31,3 +31,8 @@
 {
     text-align: left !important;
 }
+.ico {
+    position: relative;
+    left: 13px;
+    top: 5px;
+}

@@ -4,12 +4,8 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const Footer = () => {
   return (
-    <MDBFooter
-      id="footer"
-      color=""
-      className="font-small pt-3 pb-3 mt-4 bg-light text-dark"
-    >
-      <MDBContainer className=" ">
+    <MDBFooter color="" className="font-small pt-3 pb-3 mt-4 bg-light text-dark footer">
+      <MDBContainer  className=" ">
         <MDBRow>
           <MDBCol className="social left">
             <a href="#">
