@@ -1,8 +1,5 @@
 import React, { Component } from "react";
-import {
-  Link
-} from 'react-router-dom';
-
+import { Link } from "react-router-dom";
 
 import {
   MDBNavbar,
@@ -36,16 +33,16 @@ class NavbarPage extends Component {
         <MDBNavbar className="bg-white" light expand="md">
           <MDBContainer>
             <Link to="/">
-            <MDBNavbarBrand>
-              <img
+              <MDBNavbarBrand>
+                <img
                   src={Foss}
                   className="img-fluid"
                   alt="logo"
                   style={{
-                  width: "45px",
-                }}
-              />
-            </MDBNavbarBrand>
+                    width: "45px",
+                  }}
+                />
+              </MDBNavbarBrand>
             </Link>
             <MDBNavbarToggler
               className="bg-light"
@@ -53,43 +50,43 @@ class NavbarPage extends Component {
             />
             <MDBCollapse id="navbarCollapse3" isOpen={this.state.isOpen} navbar>
               <MDBNavbarNav right>
-             
                 <MDBNavItem>
                   <MDBNavLink className="text-dark" to="/">
                     Dashboard
                   </MDBNavLink>
                 </MDBNavItem>
-                
-              
+
                 <MDBNavItem>
                   <MDBDropdown>
                     <MDBDropdownToggle nav>
                       <div className="d-none d-md-inline text-dark">
-                          Services
+                        Services
                       </div>
                     </MDBDropdownToggle>
-                      <MDBDropdownMenu className="dropdown-default">
-                        <MDBDropdownItem>
-                          <MDBNavLink className="text-dark" to="/Blog">
-                            FOSS Blog
-                          </MDBNavLink>
-                        </MDBDropdownItem>
-                        <MDBDropdownItem href="#!">Foss Forum</MDBDropdownItem>
-                        <MDBDropdownItem href="#!">Mail Server</MDBDropdownItem>
-                        <MDBDropdownItem href="#!">KetchUp AddOn</MDBDropdownItem>
-                        <MDBDropdownItem href="#!">Event 404</MDBDropdownItem>
-                        <MDBDropdownItem href="#!">RSVP App</MDBDropdownItem>
-                      </MDBDropdownMenu>
-                     </MDBDropdown>
-                   </MDBNavItem>
-                
-                
-                  <MDBNavItem>
-                    <MDBNavLink className="text-dark" to="/about">
-                      About
+                    <MDBDropdownMenu className="dropdown-default">
+                      <MDBDropdownItem href="/Blog">FOSS Blog</MDBDropdownItem>
+                      <MDBDropdownItem href="/forum">
+                        Foss Forum
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="/mailserver">
+                        Mail Server
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="/ketchup">
+                        KetchUp AddOn
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="event404">
+                        Event 404
+                      </MDBDropdownItem>
+                      <MDBDropdownItem href="/rsvp">RSVP App</MDBDropdownItem>
+                    </MDBDropdownMenu>
+                  </MDBDropdown>
+                </MDBNavItem>
+
+                <MDBNavItem>
+                  <MDBNavLink className="text-dark" to="/about">
+                    About
                   </MDBNavLink>
-                  </MDBNavItem>
-          
+                </MDBNavItem>
               </MDBNavbarNav>
             </MDBCollapse>
           </MDBContainer>

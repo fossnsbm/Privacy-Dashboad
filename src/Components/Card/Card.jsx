@@ -10,35 +10,53 @@ export default class Card extends Component {
         super(props);
         this.state = {
             cardDetails: [
-                {
+                {   
                     id: 1,
-                    title: 'Card Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-newspaper',
+                    title: 'Foss Blog',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 },
                 {
                     id: 2,
-                    title: 'Card 2 Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-comment-dots',
+                    title: 'Foss Forum',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 },
                 {
                     id: 3,
-                    title: 'Card 3 Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-envelope',
+                    title: 'Mail Server',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 },
                 {
                     id: 4,
-                    title: 'Card 4 Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-window-restore',
+                    title: 'KetchUp AddOn',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 },
                 {
                     id: 5,
-                    title: 'Card 5 Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-calendar-alt',
+                    title: 'Event 404',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 },
                 {
                     id: 6,
-                    title: 'Card 6 Title',
-                    text: 'Some quick example text to build on the card title and make up the bulk of the cards content.',
+                    icon:'far fa-window-restore',
+                    title: 'RSVP App',
+                    status: 'Active',
+                    downTime: '1 Day ago',
+                    lastUpdate: '2021/02/01'
                 }
             ]
         }
@@ -48,9 +66,12 @@ export default class Card extends Component {
         return this.state.cardDetails.map((detail) => {
             return(
                 <CardItem 
-                    key={detail.id}
-                    title={detail.title}
-                    cardText={detail.text}
+                key={detail.id}
+                icon={detail.icon}
+                title={detail.title}
+                status={detail.status}
+                downTime={detail.downTime}
+                lastUpdate={detail.lastUpdate}
                 />
             );
         });
