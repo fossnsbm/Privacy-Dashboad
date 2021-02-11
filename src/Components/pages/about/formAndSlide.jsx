@@ -1,8 +1,8 @@
 import React from "react";
-import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask, MDBContainer } from
+import { MDBCarousel, MDBCarouselCaption, MDBCarouselInner, MDBCarouselItem, MDBView, MDBMask} from
 "mdbreact";
 import './aboutStyle.css';
-import { MDBInput } from "mdbreact";
+
 
 function FormAndSlide() {
   return (
@@ -39,7 +39,6 @@ function FormAndSlide() {
  
   
                   </form>
-
                     {/*<label htmlFor="exampleInputEmail1" className="form-label">
                     Email address
                     </label>*/}
