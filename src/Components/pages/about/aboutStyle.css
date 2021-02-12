@@ -72,7 +72,12 @@ img{
 }
 
 .topic
-{
-    text-align: left;
+{ text-align: left;
     font-weight: bolder;  
 }
+
+.error_msg {
+    color: red;
+    font-weight: bold;
+}
+
