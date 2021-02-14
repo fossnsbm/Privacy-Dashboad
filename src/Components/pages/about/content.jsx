@@ -12,10 +12,8 @@ function Content() {
 
       <h6 className="container mb-4">
         <p className="topic mb-5">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi impedit
-        harum molestiae perferendis vitae rerum? Voluptas velit aliquam
-        exercitationem quia rem id natus nam odit inventore? Ad architecto alias
-        recusandae. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit id aut cumque et doloremque recusandae in sed optio max
+        This project is a collaberation with the volunteers. We  have focused on creating the forum,mail server and others with parallel to the digital world.
+        Also we have paved a path to uplift creative minds to write articles on the blogging section.
         </p>
       </h6>
     </>
