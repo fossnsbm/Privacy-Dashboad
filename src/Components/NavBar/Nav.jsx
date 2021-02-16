@@ -58,10 +58,8 @@ class NavbarPage extends Component {
 
                 <MDBNavItem>
                   <MDBDropdown>
-                    <MDBDropdownToggle nav>
-                      <div className="d-none d-md-inline text-dark">
+                    <MDBDropdownToggle nav className="text-dark">
                         Services
-                      </div>
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
                       <MDBDropdownItem href="/Blog">FOSS Blog</MDBDropdownItem>
