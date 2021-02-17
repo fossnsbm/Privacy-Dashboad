@@ -16,7 +16,8 @@ export default class Card extends Component {
                     title: 'Foss Blog',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/blog'
                 },
                 {
                     id: 2,
@@ -24,7 +25,8 @@ export default class Card extends Component {
                     title: 'Foss Forum',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/forum'
                 },
                 {
                     id: 3,
@@ -32,7 +34,8 @@ export default class Card extends Component {
                     title: 'Mail Server',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/mailserver'
                 },
                 {
                     id: 4,
@@ -40,7 +43,8 @@ export default class Card extends Component {
                     title: 'KetchUp AddOn',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/ketchup'
                 },
                 {
                     id: 5,
@@ -48,7 +52,8 @@ export default class Card extends Component {
                     title: 'Event 404',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/event404'
                 },
                 {
                     id: 6,
@@ -56,7 +61,8 @@ export default class Card extends Component {
                     title: 'RSVP App',
                     status: 'Active',
                     downTime: '1 Day ago',
-                    lastUpdate: '2021/02/01'
+                    lastUpdate: '2021/02/01',
+                    path: '/rsvp'
                 }
             ]
         }
@@ -72,6 +78,7 @@ export default class Card extends Component {
                 status={detail.status}
                 downTime={detail.downTime}
                 lastUpdate={detail.lastUpdate}
+                path={detail.path}
                 />
             );
         });
