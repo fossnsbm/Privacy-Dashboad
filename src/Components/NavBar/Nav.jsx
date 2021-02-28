@@ -58,26 +58,25 @@ class NavbarPage extends Component {
 
                 <MDBNavItem>
                   <MDBDropdown>
-                    <MDBDropdownToggle nav>
-                      <div className="d-none d-md-inline text-dark">
+                    <MDBDropdownToggle nav className="text-dark">
                         Services
-                      </div>
                     </MDBDropdownToggle>
                     <MDBDropdownMenu className="dropdown-default">
-                      <MDBDropdownItem href="/Blog">FOSS Blog</MDBDropdownItem>
-                      <MDBDropdownItem href="/forum">
-                        Foss Forum
+                      <MDBDropdownItem><Link to="/blog">FOSS Blog</Link></MDBDropdownItem>
+                      
+                      <MDBDropdownItem>
+                        <Link to="/forum">Foss Forum</Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="/mailserver">
-                        Mail Server
+                      <MDBDropdownItem>
+                        <Link to="/mailserver">Mail Server</Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="/ketchup">
-                        KetchUp AddOn
+                      <MDBDropdownItem>
+                        <Link to="/ketchup">KetchUp AddOn</Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="event404">
-                        Event 404
+                      <MDBDropdownItem>
+                        <Link to="/event404">Event 404</Link>
                       </MDBDropdownItem>
-                      <MDBDropdownItem href="/rsvp">RSVP App</MDBDropdownItem>
+                      <MDBDropdownItem><Link to="/rsvp">RSVP App</Link></MDBDropdownItem>
                     </MDBDropdownMenu>
                   </MDBDropdown>
                 </MDBNavItem>
