@@ -8,7 +8,7 @@ export default class Content extends Component {
             <React.Fragment>
                 <div className="container">
                     <h1>Privacy Dashboard</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis, provident. Non sed alias consequuntur officia quos porro quam quia earum facere debitis, odio ducimus ab officiis esse qui exercitationem sequi.</p>
+                    <p>Welcome to Privacy Dashboard! A place where you can find all the resources managed by the FOSS Community of NSBM.  A community of tech enthusiasts who love Open - Source.</p>
                 </div>
             </React.Fragment>
         )
