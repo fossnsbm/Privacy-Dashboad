@@ -41,7 +41,7 @@ export default class Card extends Component {
                     id: 4,
                     icon:'far fa-window-restore',
                     title: 'KetchUp AddOn',
-                    status: 'Active',
+                    status: 'Inactive',
                     downTime: '1 Day ago',
                     lastUpdate: '2021/02/01',
                     path: '/ketchup'
@@ -59,7 +59,7 @@ export default class Card extends Component {
                     id: 6,
                     icon:'far fa-window-restore',
                     title: 'RSVP App',
-                    status: 'Active',
+                    status: 'Inactive',
                     downTime: '1 Day ago',
                     lastUpdate: '2021/02/01',
                     path: '/rsvp'
