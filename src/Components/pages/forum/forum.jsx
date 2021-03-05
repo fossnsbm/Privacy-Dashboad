@@ -82,17 +82,20 @@ const Forum = (props) => {
         <MDBCol className="lg-6">
           <h2>FOSS Forum</h2>
           <p className="blogpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-            nisi architecto quasi. Nobis non labore cumque eius necessitatibus
-            eaque expedita amet, dolore tempora blanditiis vel debitis delectus
-            aut, ratione quisquam
+            FOSS NSBM Forum is a platform where students can post 
+            any technology related issue.
+            There's a community of open - source enthusiasts 
+            who are willing to interactively
+            discuss these issues with you and find solutions for them.
+            Our wish is for the FOSS NSBM Forum to become a hub for 
+            learning new things and sharing of knowledge.
           </p>
+
           <p className="blogpara">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente
-            aperiam labore ipsum natus enim culpa, laborum repellendus quo?
-            Quaerat, alias? Suscipit assumenda, illum id soluta quidem animi
-            culpa distinctio!
+            You can also find the meeting minutes and other documentations 
+            related to the FOSS Community of NSBM here.
           </p>
+          
           <Chart />
         </MDBCol>
 
