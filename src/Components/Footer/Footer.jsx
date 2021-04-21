@@ -4,35 +4,38 @@ import { MDBCol, MDBContainer, MDBRow, MDBFooter, MDBIcon } from "mdbreact";
 
 const Footer = () => {
   return (
-    <MDBFooter color="" className="font-small pt-3 pb-3 mt-4 bg-light text-dark footer">
-      <MDBContainer  className=" ">
+    <MDBFooter
+      color=""
+      className="font-small pt-3 pb-3 mt-4 bg-light text-dark footer"
+    >
+      <MDBContainer className=" ">
         <MDBRow>
           <MDBCol className="social left">
-            <a href="#">
+            <a href="https://github.com/fossnsbm">
               <MDBIcon fab icon="github" className="fa-2x git icon" />
             </a>
-            <a href="#">
+            <a href="https://www.linkedin.com/company/fossnsbm">
               <MDBIcon
                 fab
                 icon="linkedin"
                 className="fa-2x pl-3 pr-3 lin icon"
               />
             </a>
-            <a href="#">
+            <a href="https://www.facebook.com/foss.nsbm/">
               <MDBIcon
                 fab
                 icon="facebook-square"
                 className="fa-2x pr-3 fac icon"
               />
             </a>
-            <a href="#">
+            <a href="https://twitter.com/fossnsbm">
               <MDBIcon
                 fab
                 icon="twitter-square"
                 className="fa-2x pr-3 twit icon"
               />
             </a>
-            <a href="#">
+            <a href="https://www.instagram.com/fossnsbm/">
               <MDBIcon fab icon="instagram" className="fa-2x ins icon" />
             </a>
           </MDBCol>
