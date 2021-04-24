@@ -26,7 +26,9 @@ export default class CardItem extends Component {
 
                         <MDBCard className="mcard">
                             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+
                                 <i className="far fa-window-restore fa-3x ico"></i>
+
                             </MDBCardHeader>
                             <Link to="/blog">
                             <MDBCardBody cascade className="text-right">
@@ -44,7 +46,9 @@ export default class CardItem extends Component {
                     
                         <MDBCard className="mcard">
                             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+
                                 <i className="far fa-comment-dots fa-3x ico"></i>
+
                             </MDBCardHeader>
                             <Link to="/blog">
                             <MDBCardBody cascade className="text-right">
@@ -59,8 +63,9 @@ export default class CardItem extends Component {
 
                         <MDBCard className="mcard">
                             <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+
                                 <i className="far fa-calendar-alt fa-3x ico"></i>
-                            </MDBCardHeader>
+          </MDBCardHeader>
                             <Link to="/blog">
                             <MDBCardBody cascade className="text-right">
                                 <MDBCardTitle className="mcardtitle">Event 404</MDBCardTitle>
@@ -78,7 +83,9 @@ export default class CardItem extends Component {
                     
                     <MDBCard className="mcard">
                         <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+
                             <i className="far fa-envelope fa-3x ico"></i>
+
                         </MDBCardHeader>
                         <Link to="/blog">
                         <MDBCardBody cascade className="text-right">
@@ -93,7 +100,9 @@ export default class CardItem extends Component {
 
                     <MDBCard className="mcard">
                         <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
+
                             <i className="far fa-window-restore fa-3x ico"></i>
+
                         </MDBCardHeader>
                         <Link to="/blog">
                         <MDBCardBody cascade className="text-right">

@@ -17,8 +17,7 @@ img{
 }
 
 .topic
-{
-    text-align: left;
+{ text-align: left;
     font-weight: bolder;  
 }
 
@@ -26,3 +25,4 @@ img{
     color: red;
     font-weight: bold;
 }
+

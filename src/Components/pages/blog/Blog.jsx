@@ -79,8 +79,8 @@ const Blog = (props) => {
 
               <MDBCol className="lg-6">
                 <h2>FOSS Blog</h2>
-                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nisi architecto quasi. Nobis non labore cumque eius necessitatibus eaque expedita amet, dolore tempora blanditiis vel debitis delectus aut, ratione quisquam</p>
-                <p className="blogpara">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex sapiente aperiam labore ipsum natus enim culpa, laborum repellendus quo? Quaerat, alias? Suscipit assumenda, illum id soluta quidem animi culpa distinctio!</p>
+                <p className="blogpara">This provides people with open mind to write and publish out there informal style.Blogging creates the team skills,writing and creative skills of the users.The biggest question who can contribute to the foss Blog? The main contributers should be NSBM FOSS volunteers.</p>
+                
                 <Chart/>
               </MDBCol>
 
