@@ -1,62 +1,93 @@
 import React, { Component } from 'react';
-
+import axios from 'axios';
 import CardItem from './CardItem';
 
 import './CardStyle.css';
 
 export default class Card extends Component {
 
+
     constructor(props) {
         super(props);
+        this.state = {
 
+
+            cardDetails: [
+                {
+                    id: 1,
+                    status: 'Loading',
+                },
+                {
+                    id: 2,
+                    status: 'Loading',
+                },
+                {
+                    id: 3,
+                    status: 'Loading',
+                },
+                {
+                    id: 4,
+                    status: 'Loading',
+                },
+                {
+                    id: 5,
+                    status: 'Loading',
+                },
+                {
+                    id: 6,
+                    status: 'Loading',
+                }
+            ]
+        }
     }
 
     componentDidMount = () => {
 
+        let a = this.state.cardDetails.slice(); //creates the clone of the state
+
+        axios.get("/blog").then(response => {
+
+            a[0].status = response.data;
+            this.setState({cardDetails: a});
+            
+        })
+
+        axios.get("/forum").then(response => {
+
+            a[1].status = response.data;
+            this.setState({cardDetails: a});
+            
+        })
+
+        //a[0].status = stattus;
+        //this.setState({cardDetails: a});
+
+        //a[1].status = "Active";
+        //this.setState({cardDetails: a});
+
+        a[2].status = "temp";
+        this.setState({cardDetails: a});
+
+        a[3].status = "temp";
+        this.setState({cardDetails: a});
+
+        a[4].status = "temp";
+        this.setState({cardDetails: a});
+
+        a[5].status = "temp";
+        this.setState({cardDetails: a});
         
-        this.blog();
-        this.forum();
-
-
-
     }
-
-
-    blog = () => {
-        var http = require("http");
- 
-        http.get({host: "fossnsbm.org"}, function(res){
-        if( res.statusCode == 200 ){
-            console.log("This site is up and running!");
-            //this.setState({cardDetails[0].status:"Active"});
-            document.getElementById("lblBlog").innerHTML = "<span class='badge rounded-pill bg-success'>Status: Active</span>";
-        }
-        else{
-            console.log("This site might be down "+res.statusCode);
-            document.getElementById("lblBlog").innerHTML = "<span class='badge rounded-pill bg-danger'>Status: Inactive</span>";
-        }
-        });
-    }
-
-    forum = () => {
-        var http = require("https");
- 
-        http.get({host: "forum.fossnsbm.org/categories.json"}, function(res){
-        if( res.statusCode == 200 ){
-            console.log("This site is up and running!");
-            //this.setState({cardDetails[0].status:"Active"});
-            document.getElementById("lblForum").innerHTML = "<span class='badge rounded-pill bg-success'>Status: Active</span>";
-        }
-        else{
-            console.log("This site might be down "+res.statusCode);
-            document.getElementById("lblForum").innerHTML = "<span class='badge rounded-pill bg-danger'>Status: Inactiv</span>";
-        }
-        });
-    }
-
 
     cardDetailsCommponent = () => {
-        
+        return this.state.cardDetails.map((detail) => {
+            return(
+                <CardItem 
+                    key={detail.id}
+                    status={detail.status}
+                />
+            );
+        });
     };
 
     render() {
@@ -64,10 +95,12 @@ export default class Card extends Component {
             <div>
                 <div className="container">
                     <div className="row">
-                      <CardItem  />
+                        {this.cardDetailsCommponent()}
                     </div>
                 </div>
             </div>
         )
     }
 }
+
+
