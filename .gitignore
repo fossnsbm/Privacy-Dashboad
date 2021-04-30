@@ -2,7 +2,6 @@
 
 # dependencies
 /node_modules
-/dashboard-Backend/node_modules
 /.pnp
 .pnp.js
 .vscode
