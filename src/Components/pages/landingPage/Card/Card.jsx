@@ -17,7 +17,7 @@ export default class Card extends Component {
   componentDidMount() {
     axios({
       method: "GET",
-      url: "http://localhost:4000/check",
+      url: "https://privacy-api.fossnsbm.org/check",
     })
       .then((response) => {
         this.setState({
