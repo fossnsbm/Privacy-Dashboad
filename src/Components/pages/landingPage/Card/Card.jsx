@@ -1,73 +1,61 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
+import axios from "axios";
 
-import CardItem from './CardItem';
+import CardItem from "./CardItem";
 
-import './CardStyle.css';
+import "./CardStyle.css";
 
 export default class Card extends Component {
-
-    constructor(props) {
-        super(props);
-
-    }
-
-    componentDidMount = () => {
-
-        
-        this.blog();
-        this.forum();
-
-
-
-    }
-
-
-    blog = () => {
-        var http = require("http");
- 
-        http.get({host: "fossnsbm.org"}, function(res){
-        if( res.statusCode == 200 ){
-            console.log("This site is up and running!");
-            //this.setState({cardDetails[0].status:"Active"});
-            document.getElementById("lblBlog").innerHTML = "<span class='badge rounded-pill bg-success'>Status: Active</span>";
-        }
-        else{
-            console.log("This site might be down "+res.statusCode);
-            document.getElementById("lblBlog").innerHTML = "<span class='badge rounded-pill bg-danger'>Status: Inactive</span>";
-        }
-        });
-    }
-
-    forum = () => {
-        var http = require("https");
- 
-        http.get({host: "forum.fossnsbm.org/categories.json"}, function(res){
-        if( res.statusCode == 200 ){
-            console.log("This site is up and running!");
-            //this.setState({cardDetails[0].status:"Active"});
-            document.getElementById("lblForum").innerHTML = "<span class='badge rounded-pill bg-success'>Status: Active</span>";
-        }
-        else{
-            console.log("This site might be down "+res.statusCode);
-            document.getElementById("lblForum").innerHTML = "<span class='badge rounded-pill bg-danger'>Status: Inactiv</span>";
-        }
-        });
-    }
-
-
-    cardDetailsCommponent = () => {
-        
+  constructor(props) {
+    super(props);
+    this.state = {
+      cardDetails: [],
+      isLoading: false,
     };
+  }
 
-    render() {
-        return (
-            <div>
-                <div className="container">
-                    <div className="row">
-                      <CardItem  />
-                    </div>
-                </div>
-            </div>
-        )
+  componentDidMount() {
+    axios({
+      method: "GET",
+      url: "https://privacy-api.fossnsbm.org/check",
+    })
+      .then((response) => {
+        this.setState({
+          cardDetails: response.data.statusData,
+          isLoading: true,
+        });
+        console.log(response.data.statusData);
+      })
+      .catch((response) => {
+        console.log(response);
+      });
+  }
+
+  cardDetailsCommponent = () => {
+    return this.state.cardDetails.map((detail) => {
+      return (
+        <CardItem
+          key={detail.id}
+          icon={detail.icon}
+          title={detail.title}
+          status={detail.status}
+          downTime={detail.downTime}
+          lastUpdate={detail.lastUpdate}
+          path={detail.path}
+        />
+      );
+    });
+  };
+
+  render() {
+    if (this.state.isLoading) {
+      return (
+        <div className="container">
+          <div className="row">{this.cardDetailsCommponent()}</div>
+        </div>
+      );
+    } else {
+      return <h1>Loading</h1>;
     }
+  }
 }
