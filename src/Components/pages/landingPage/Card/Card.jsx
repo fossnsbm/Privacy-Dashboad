@@ -55,7 +55,14 @@ export default class Card extends Component {
         </div>
       );
     } else {
+<<<<<<< HEAD
       return <h2>Loading</h2>;
     }
   }
 }
+=======
+      return <h1>Loading</h1>;
+    }
+  }
+}
+>>>>>>> main
