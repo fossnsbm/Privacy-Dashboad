@@ -18,12 +18,12 @@ export default class Card extends Component {
     axios({
       method: "GET",
       url: "https://privacy-api.fossnsbm.org/check",
-      timeout: 9000,
+      timeout: 10000,
     })
       .then((response) => {
-        console.log(response.data);
+        console.log(response.data.statusData);
         this.setState({
-          cardDetails: response.data,
+          cardDetails: response.data.statusData,
           isLoading: true,
         });
         // console.log(response.data.statusData);
@@ -58,14 +58,7 @@ export default class Card extends Component {
         </div>
       );
     } else {
-<<<<<<< HEAD
-      return <h2>Loading</h2>;
-    }
-  }
-}
-=======
       return <h1>Loading</h1>;
     }
   }
 }
->>>>>>> main
