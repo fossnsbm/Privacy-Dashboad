@@ -9,6 +9,7 @@ export default class CardItem extends Component {
             <React.Fragment>
                 <MDBCol sm="12" md="6" lg="4">
                     
+
                     <MDBCard className="mcard">
                         <MDBCardHeader className="view view-cascade gradient-card-header blue-gradient-rgba py-2 mx-4 mb-3 mcardheader">
                             <i className={`${this.props.icon} fa-3x ico`}></i>
