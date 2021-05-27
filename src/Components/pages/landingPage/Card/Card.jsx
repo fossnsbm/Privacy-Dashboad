@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { PropagateLoader } from "react-spinners";
 
 import CardItem from "./CardItem";
 
@@ -17,8 +18,7 @@ export default class Card extends Component {
   componentDidMount() {
     axios({
       method: "GET",
-      url: "https://privacy-api.fossnsbm.org/check",
-      timeout: 10000,
+      url: "https://webstatuscheck.herokuapp.com/check",
     })
       .then((response) => {
         console.log(response.data.statusData);
@@ -26,7 +26,7 @@ export default class Card extends Component {
           cardDetails: response.data.statusData,
           isLoading: true,
         });
-        // console.log(response.data.statusData);
+        console.log(response.data.statusData);
       })
       .catch((response) => {
         console.log(response);
@@ -58,7 +58,14 @@ export default class Card extends Component {
         </div>
       );
     } else {
-      return <h1>Loading</h1>;
+      return (
+        <div>
+          <div className="loader">
+            <PropagateLoader loading size={40} color="#4A90E2"/>
+          </div>
+          <h4 className="loadertext">...Loading...</h4>
+        </div>
+      );
     }
   }
 }

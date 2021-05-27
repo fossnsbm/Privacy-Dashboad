@@ -36,3 +36,18 @@
     left: 13px;
     top: 5px;
 }
+
+.loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+}
+
+.loadertext {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-left: 45px;
+}
