@@ -28,21 +28,27 @@ export default function LandingPage() {
   const cardDetails = [
     {
       icon: "BiEdit",
+      title: "FOSS Blog"
     },
     {
       icon: "AiOutlineMail",
+      title: "Mail Server"
     },
     {
       icon: "MdForum",
+      title: "FOSS Forum"
     },
     {
       icon: "BsPuzzleFill",
+      title: "KetchUp AddOn"
     },
     {
       icon: "GrDocumentTime",
+      title: "Event 404"
     },
     {
       icon: "RiMailCheckFill",
+      title: "RSVP App"
     },
   ];
 
@@ -81,7 +87,7 @@ export default function LandingPage() {
                   item
                   key={key}
                 >
-                  <Card icon={item.icon} />
+                  <Card icon={item.icon} title={item.title} />
                 </Grid>
               );
             })}

@@ -58,7 +58,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Card({ icon }) {
+export default function Card({ icon, title }) {
 
   const classes = useStyles();
 
@@ -88,7 +88,7 @@ export default function Card({ icon }) {
           {Icon(icon)}
         </Box>
         <CardContent>
-          <Typography className={classes.title}>FOSS Blog</Typography>
+          <Typography className={classes.title}>{title}</Typography>
           <Grid
             container
             direction="row"
