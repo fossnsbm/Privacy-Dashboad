@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react'
+import { makeStyles } from "@material-ui/core/styles";
 
-function App() {
+import LandingPage from './Components/LandingPage/LandingPage';
+
+const useStyles = makeStyles(() => ({
+  root: {
+    height: '100%',
+      background: 'linear-gradient(to bottom, #3b42b0 0%,#212263 57%,#0b0f22 100%)',
+      overflow: 'auto'
+  },
+}));
+
+export default function App() {
+
+  const classes = useStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.root}>
+      <LandingPage />
     </div>
-  );
+  )
 }
-
-export default App;
