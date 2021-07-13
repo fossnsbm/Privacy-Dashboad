@@ -2,16 +2,12 @@
 
 # dependencies
 /node_modules
-Backend/node_modules
 /.pnp
 .pnp.js
-.vscode
 
 # testing
 /coverage
 
-.eslintcache
-.eslintcache~Stashed changes
 # production
 /build
 
@@ -25,6 +21,3 @@ Backend/node_modules
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-
-.prettierrc

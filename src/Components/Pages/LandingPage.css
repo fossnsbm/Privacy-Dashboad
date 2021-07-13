@@ -1,0 +1,44 @@
+.SidebarGrid {
+    display: none;
+  }
+
+
+.header {
+  color: #FCFCFC;
+  margin-top: 20px !important;
+  margin-bottom: 60px !important;
+}
+@media (min-width: 768px) {
+  
+  .SidebarGrid {
+    display: block;
+  }
+}
+
+@media (max-width: 1680px) {
+  
+  .CardGrid{
+    margin-left: 40px !important;
+  }
+}
+
+@media (max-width: 1137px) {
+  
+  .header {
+    font-size:15px !important;
+  }
+}
+
+@media (max-width: 910px) {
+  .header {
+    font-size:12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  
+  .CardGrid{
+    margin-left: 0px !important;
+  }
+}
+  

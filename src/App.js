@@ -1,27 +1,25 @@
-import React from "react";
-import { BrowserRouter as Router, Switch } from "react-router-dom";
-
 import './App.css';
-import Nav from "./Components/NavBar/Nav";
-import Footer from "./Components/Footer/Footer";
-import routes, { RoutWithSubRoutes } from './routes'
+import LandingPage from './Components/Pages/LandingPage';
+import { BrowserRouter as Router, Redirect, Route, Switch } from 'react-router-dom';
+import MobileNavigation from './Components/Elements/MobileNavigation';
 
-export default function App() {
+function App() {
   return (
-    <div>
-        <div className='app'>
-        <Router>
-          <Nav />
+    <div className="App">
+       <Router>
+        <MobileNavigation/>
+        <main>
           <Switch>
-              {routes.map((route, i) => (
-                <RoutWithSubRoutes key={i} {...route} />
-              )
-              )}
+
+            <Route path="/" exact>
+            <LandingPage/>
+            </Route>
+            <Redirect to="/" />
           </Switch>
-        </Router>
-        </div>
-        <Footer/>
-      </div>
-  )
+        </main>
+      </Router>
+    </div>
+  );
 }
 
+export default App;
