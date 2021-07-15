@@ -11,32 +11,38 @@ export const CardItems = [
     {
         title: "FOSS Blog",
         icon: <BookOutlinedIcon/>,
-        link: '/blog'
+        link: '/blog',
+        status: ''
     },
     {
         title: "Mail Server",
         icon: <MailOutlinedIcon/>,
-        link: '/mail'
+        link: '/mail',
+        status: ''
     },
     {
         title: "FOSS Forum",
         icon: <ForumOutlinedIcon/>,
-        link: '/forum'
+        link: '/forum',
+        status: ''
     },
     {
         title: "Ketchup",
         icon: <ExtensionOutlinedIcon/>,
-        link: '/ketchup'
+        link: '/ketchup',
+        status: ''
     },
     {
         title: "Event 404",
         icon: <EventNoteOutlinedIcon/>,
-        link: '/event'
+        link: '/event',
+        status: ''
     },
     {
         title: "RSVP App",
         icon: <EventAvailableOutlinedIcon/>,
-        link: '/rsvp'
+        link: '/rsvp',
+        status: ''
     },
 
 ];

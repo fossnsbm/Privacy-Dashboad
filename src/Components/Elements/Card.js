@@ -32,7 +32,7 @@ const useStyles = makeStyles(() => ({
   },
 }));
 
-export default function Card({ icon, title }) {
+export default function Card({ icon, title, status }) {
 
   const classes = useStyles();
 
@@ -59,7 +59,7 @@ export default function Card({ icon, title }) {
             <Grid item>
               <Badge color="secondary" className={classes.badge}>
                 <Typography className={classes.badgeText}>
-                  Active
+                  {status}
                 </Typography>
               </Badge>
             </Grid>

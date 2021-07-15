@@ -35,6 +35,7 @@
   }
   
   .item-row{
+  text-decoration: none;
   list-style-type: none;
   width: 60%;
   height: 49px;
