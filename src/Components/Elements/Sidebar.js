@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 import { Navitems } from './Navitems';
 import './Sidebar.css';
 import Logo from '../Images/logo.png'; 
@@ -17,16 +19,18 @@ const Sidebar = () => {
             <div className="Slide-bar-list">
                 {Navitems.map((val, key) => {
                     return (
-                        <li
+                        <Link
                             className="item-row" key={key}
+                            to={val.link}
+                            
                             id={window.location.pathname === val.link ? "active" : ""}
-                            onClick={() => { window.location.pathname = val.link }}
+                            // onClick={() => { window.location.pathname = val.link }}
                         >
                             <div className="item-icon">{val.icon}</div>
                             <div className="item-title">
                                 {val.title}
                             </div>
-                        </li>
+                        </Link>
                     );
                 })}
             </div>

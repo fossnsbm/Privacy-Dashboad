@@ -1,8 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './SideDrawer.css';
 import { CSSTransition } from 'react-transition-group';
+import { Link } from "react-router-dom";
+
 import { Navitems } from './Navitems';
+import './SideDrawer.css';
 
 const SideDrawer = props => {
     const content = <CSSTransition
@@ -17,16 +19,17 @@ const SideDrawer = props => {
                 <div className="Slide-bar-list2 ">
                     {Navitems.map((val, key) => {
                         return (
-                            <li
+                            <Link
                                 className="item-row2" key={key}
+                                to={val.link}
                                 id={window.location.pathname === val.link ? "active2" : ""}
-                                onClick={() => { window.location.pathname = val.link }}
+                                // onClick={() => { window.location.pathname = val.link }}
                             >
                                 <div className="item-icon">{val.icon}</div>
                                 <div className="item-title">
                                     {val.title}
                                 </div>
-                            </li>
+                            </Link>
                         );
                     })}
                 </div>
