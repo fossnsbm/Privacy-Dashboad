@@ -26,6 +26,7 @@
   }
 
 .item-row2{
+    color: black;
     text-decoration: none;
     list-style-type: none;
     width: 60%;
@@ -52,6 +53,13 @@
 
 #active2{
     background-color: #264653;
-    color: whitesmoke;
     box-shadow: rgba(0, 0, 0, 0.192) 5px 5px 15px;
+  }
+
+  #active2 .item-icon{
+    color: white;
+  }
+
+  #active2 .item-title{
+    color: white;
   }

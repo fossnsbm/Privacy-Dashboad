@@ -57,10 +57,12 @@
   flex: 42%;
   display: grid;
   place-items: center;
+  color: black;
   }
   
   .item-row .item-title {
   flex: 70%;
+  color: black;
   }
   
   .bar-title-main{
@@ -100,10 +102,17 @@
 
   #active{
   background-color: #264653;
-  color: whitesmoke;
   box-shadow: rgba(0, 0, 0, 0.192) 5px 5px 15px;
 
   }
+
+  #active .item-icon{
+      color: white;
+    }
+
+    #active .item-title{
+      color: white;
+    }
   
   @media (min-width: 768px) {
   

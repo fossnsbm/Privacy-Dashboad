@@ -106,3 +106,11 @@
         max-height: 230px;
     }
     }
+
+
+    @media (max-width: 387px) {
+
+        .card{
+            max-height: unset;
+        }
+    }

@@ -33,7 +33,7 @@ export default function LandingPage() {
       .then((response) => {
         console.log(response.data.statusData);
         CardItems.map((item, i) => {
-            return item.status = response.data.statusData[i].status
+          return item.status = response.data.statusData[i].status
         })
         setisLoading(true);
       })
@@ -103,10 +103,24 @@ export default function LandingPage() {
         </div>
       ) : (
         <div>
-          <div className="loader">
-            <PropagateLoader loading size={40} color="#ffffff" />
-          </div>
-          <h4 className="loadertext">Loading...</h4>
+
+          <Grid
+            container
+            spacing={0}
+            direction="column"
+            alignItems="center"
+            justifyContent="center"
+            style={{ minHeight: '50vh' }}
+          >
+
+            <Grid item xs={3}>
+              <div className="loader">
+                <PropagateLoader loading size={40} color="#ffffff" />
+              </div>
+            </Grid>
+
+          </Grid>
+
         </div>
       )}
     </div>
