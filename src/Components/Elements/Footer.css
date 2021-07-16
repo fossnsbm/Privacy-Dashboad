@@ -1,0 +1,30 @@
+
+.footer-div {
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    bottom: 0;
+    height: auto;
+}
+
+.inner-1{
+    width: 100%;
+    float: right;
+    right: 0;
+}
+.inner-2{
+    width: 100%;
+    float: right;
+    left: 0;
+}
+
+
+@media (max-width: 1920px) {
+  
+    .footer-div {
+      
+        margin-top: 150px;
+    }
+    
+    }
